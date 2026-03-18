@@ -1,15 +1,15 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Button from "../components/Button.astro";
-import FeatureCard from "../components/FeatureCard.astro";
+import Layout from "../../layouts/Layout.astro";
+import Button from "../../components/Button.astro";
+import FeatureCard from "../../components/FeatureCard.astro";
 
-const lang = "en";
-const title = "SOQLite | The fastest and private SOQL client for Salesforce Professionals";
-const description = "Ultra-fast, native Salesforce client powered by Rust. Zero server overhead, total privacy, and premium features like split view and Canvas grids.";
+const lang = "es";
+const title = "SOQLite | El motor SOQL privado y rápido para profesionales de Salesforce";
+const description = "Cliente nativo para Salesforce impulsado por Rust. Privacidad total, velocidad extrema y características premium como vista dividida y rejillas Canvas.";
 ---
 
 <Layout {title} {description} {lang}>
-	<!-- Navigation -->
+	<!-- Navegación -->
 	<nav class="fixed top-0 left-0 right-0 z-50 py-4 px-6 border-b border-white/5 bg-[#0b0b0e]/80 backdrop-blur-md">
 		<div class="max-row flex items-center justify-between">
 			<div class="flex items-center gap-2">
@@ -17,13 +17,13 @@ const description = "Ultra-fast, native Salesforce client powered by Rust. Zero 
 				<span class="font-outfit text-xl font-bold tracking-tight text-white">SOQLite<span class="text-peach">⚡️</span></span>
 			</div>
 			<div class="hidden md:flex items-center gap-8">
-				<a href="#features" class="text-slate-400 hover:text-white text-sm transition-colors uppercase tracking-widest font-semibold">Features</a>
-				<a href="#how-it-works" class="text-slate-400 hover:text-white text-sm transition-colors uppercase tracking-widest font-semibold">How it works</a>
+				<a href="#features" class="text-slate-400 hover:text-white text-sm transition-colors uppercase tracking-widest font-semibold">Características</a>
+				<a href="#how-it-works" class="text-slate-400 hover:text-white text-sm transition-colors uppercase tracking-widest font-semibold">Funcionamiento</a>
 				<a href="#faq" class="text-slate-400 hover:text-white text-sm transition-colors uppercase tracking-widest font-semibold">FAQ</a>
 			</div>
 			<div class="flex items-center gap-4">
-				<a href="/es" class="text-xs font-semibold text-slate-500 hover:text-white transition-colors uppercase py-1 border-b border-white/5">Español</a>
-				<Button variant="secondary" className="px-5 py-2 text-sm" href="#download">Get SOQLite</Button>
+				<a href="/" class="text-xs font-semibold text-slate-500 hover:text-white transition-colors uppercase py-1 border-b border-white/5">English</a>
+				<Button variant="secondary" className="px-5 py-2 text-sm" href="#download">Obtener SOQLite</Button>
 			</div>
 		</div>
 	</nav>
@@ -38,20 +38,20 @@ const description = "Ultra-fast, native Salesforce client powered by Rust. Zero 
 		<div class="max-row relative z-10 text-center flex flex-col items-center">
 			<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-lavender mb-12 animate-fade-in">
 				<span class="w-2 h-2 rounded-full bg-mauve animate-pulse"></span>
-				v2.0 Beta with Rust & React 19 is here
+				v2.0 Beta con Rust y React 19 ya disponible
 			</div>
 			
 			<h1 class="font-outfit text-5xl md:text-7xl font-bold text-white mb-8 tracking-tighter leading-[1.1] max-w-4xl">
-				The Fastest, Private <span class="text-gradient">SOQL Powerhouse.</span>
+				El Motor SOQL Privado <span class="text-gradient">más Rápido.</span>
 			</h1>
 			
 			<p class="text-slate-400 text-lg md:text-xl max-w-2xl mb-12 leading-relaxed">
-				Native Rust-powered Salesforce client with zero server overhead. Total privacy, extreme speed, and a premium interface designed for professionals.
+				Cliente nativo para Salesforce impulsado por Rust y sin intermediarios. Privacidad total, velocidad extrema y una interfaz premium diseñada para profesionales.
 			</p>
 			
 			<div class="flex flex-col sm:flex-row items-center gap-4 mb-20">
-				<Button href="#download">Download for Free (v2.0)</Button>
-				<Button variant="secondary" href="#features">Explore Features</Button>
+				<Button href="#download">Descargar Gratis (v2.0)</Button>
+				<Button variant="secondary" href="#features">Explorar funciones</Button>
 			</div>
 			
 			<div class="w-full max-w-5xl relative group">
@@ -64,10 +64,10 @@ const description = "Ultra-fast, native Salesforce client powered by Rust. Zero 
 		</div>
 	</header>
 
-	<!-- Social Proof -->
+	<!-- Prueba Social -->
 	<section class="py-20 border-y border-white/5 bg-black/40">
 		<div class="max-row px-6">
-			<p class="text-center text-xs font-semibold text-slate-500 uppercase tracking-widest mb-12 italic">Powered by modern tech stacks</p>
+			<p class="text-center text-xs font-semibold text-slate-500 uppercase tracking-widest mb-12 italic">Tecnología de última generación</p>
 			<div class="flex flex-wrap items-center justify-center gap-12 md:gap-24 opacity-40 grayscale group hover:grayscale-0 transition-all duration-500">
 				<span class="text-white font-bold text-4xl">RUST</span>
 				<span class="text-white font-bold text-4xl">REACT 19</span>
@@ -78,37 +78,37 @@ const description = "Ultra-fast, native Salesforce client powered by Rust. Zero 
 		</div>
 	</section>
 
-	<!-- Problem section -->
+	<!-- Sección Problema -->
 	<section class="py-32 px-6">
 		<div class="max-row flex flex-col md:flex-row items-center gap-16">
 			<div class="flex-1">
 				<h2 class="font-outfit text-3xl md:text-5xl font-bold text-white mb-8 tracking-tight">
-					Why compromise your <span class="text-mauve">privacy</span> for tools?
+					¿Por qué comprometer tu <span class="text-mauve">privacidad</span> por herramientas lentas?
 				</h2>
 				<p class="text-slate-400 text-lg mb-8 leading-relaxed">
-					Cloud-based SOQL tools are slow and require you to send your session ID or credentials to third-party servers. <strong>SOQLite works 100% locally.</strong> 
+					Las herramientas SOQL basadas en la nube son lentas y requieren que envíes tu Session ID o credenciales a servidores externos. <strong>SOQLite funciona 100% en local.</strong> 
 				</p>
 				<ul class="flex flex-col gap-4">
 					<li class="flex items-center gap-3 text-white font-medium">
 						<svg class="w-5 h-5 text-peach" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-						Zero credentials sent to the cloud.
+						Cero credenciales enviadas a la nube.
 					</li>
 					<li class="flex items-center gap-3 text-white font-medium">
 						<svg class="w-5 h-5 text-peach" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-						No proxies or server overhead.
+						Sin proxies ni latencia de servidor.
 					</li>
 					<li class="flex items-center gap-3 text-white font-medium">
 						<svg class="w-5 h-5 text-peach" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-						Direct local sf cli authentication.
+						Autenticación directa con sf cli local.
 					</li>
 				</ul>
 			</div>
 			<div class="flex-1 w-full max-w-md">
 				<div class="glass p-8 rounded-3xl border-peach/20 relative">
 					<div class="absolute -top-4 -right-4 w-12 h-12 rounded-xl bg-peach flex items-center justify-center text-slate-950 font-bold rotate-12 shadow-xl">⚠️</div>
-					<h4 class="font-bold text-xl text-peach mb-4">The Agony of Web Tools</h4>
+					<h4 class="font-bold text-xl text-peach mb-4">La agonía de las herramientas web</h4>
 					<p class="text-slate-400 text-sm leading-relaxed mb-6">
-						Waiting for pages to load, hitting "Time Out" errors on large queries, and knowing your data is passing through someone else's server...
+						Esperar a que carguen las páginas, errores de "Time Out" en consultas grandes, y saber que tus datos pasan por el servidor de otra persona...
 					</p>
 					<div class="space-y-3 opacity-50">
 						<div class="h-2 w-3/4 bg-white/10 rounded-full"></div>
@@ -120,53 +120,53 @@ const description = "Ultra-fast, native Salesforce client powered by Rust. Zero 
 		</div>
 	</section>
 
-	<!-- Features section -->
+	<!-- Características -->
 	<section id="features" class="py-32 px-6">
 		<div class="max-row">
 			<div class="text-center mb-20">
-				<h2 class="font-outfit text-4xl font-bold text-white mb-4">The Wow Factors</h2>
-				<p class="text-slate-500 max-w-xl mx-auto">Everything you need from a pro Salesforce client, minus the lag.</p>
+				<h2 class="font-outfit text-4xl font-bold text-white mb-4">Lo mejor de SOQLite</h2>
+				<p class="text-slate-500 max-w-xl mx-auto">Todo lo que necesitas de un cliente pro para Salesforce, sin la latencia habitual.</p>
 			</div>
 			
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 				<FeatureCard 
-					title="Virtualized Grid" 
-					description="Glide Data Grid (Canvas engine) handles thousands of rows with <40MB RAM. Copy-paste flawlessly to Excel/Sheets."
+					title="Tabla Virtualizada" 
+					description="Motor Canvas que gestiona miles de filas con menos de 40MB de RAM. Copia y pega sin problemas en Excel u hojas de cálculo."
 				>
 					<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><line x1="3" x2="21" y1="9" y2="9"/><line x1="3" x2="21" y1="15" y2="15"/><line x1="9" x2="9" y1="3" y2="21"/><line x1="15" x2="15" y1="3" y2="21"/></svg>
 				</FeatureCard>
 				
 				<FeatureCard 
-					title="Monaco Intelligence" 
-					description="The power of VS Code for SOQL. Snippets, real-time object/field completion, and auto-typo correction."
+					title="Inteligencia Monaco" 
+					description="El motor de VS Code aplicado a SOQL. Snippets, autocompletado real de objetos y campos, y corrección automática de sintaxis."
 				>
 					<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
 				</FeatureCard>
 
 				<FeatureCard 
-					title="Split Viewer" 
-					description="Open multiple environments side-by-side. Compare results between Sandbox and Production in one window."
+					title="Vista Dividida" 
+					description="Abre múltiples entornos en paralelo. Compara resultados entre Sandbox y Producción en una sola ventana."
 				>
 					<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18h14V3H5zm7 0v18"/></svg>
 				</FeatureCard>
 
 				<FeatureCard 
 					title="Data Loader" 
-					description="Bulk import CSV, JSON, or Excel. Automatic field mapping based on similarity. Powered by Rust."
+					description="Importación masiva de CSV, JSON o Excel. Mapeo automático de campos por similitud impulsado por Rust."
 				>
 					<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="3" y2="15"/></svg>
 				</FeatureCard>
 
 				<FeatureCard 
-					title="Apex & Logs" 
-					description="Run anonymous Apex and stream debug logs with syntax highlighting. Filter only for USER_DEBUG effortlessly."
+					title="Apex y Logs" 
+					description="Ejecuta Apex anónimo y visualiza logs de depuración con resaltado de sintaxis. Filtra USER_DEBUG sin esfuerzo."
 				>
 					<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h10"/><path d="M9 18l3-3-3-3"/><path d="M17 12h5"/><path d="M15 6h7"/><path d="M15 18h7"/></svg>
 				</FeatureCard>
 
 				<FeatureCard 
-					title="Local Storage" 
-					description="Your history and favorites are stored in a local SQLite database. They никогда не покидают ваше устройство."
+					title="Almacenamiento Local" 
+					description="Tus consultas favoritas y tu historial se guardan en una base de datos SQLite local. Nunca salen de tu equipo."
 				>
 					<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
 				</FeatureCard>
@@ -174,29 +174,29 @@ const description = "Ultra-fast, native Salesforce client powered by Rust. Zero 
 		</div>
 	</section>
 
-	<!-- How it works -->
+	<!-- Cómo funciona -->
 	<section id="how-it-works" class="py-32 px-6 bg-mauve/5">
 		<div class="max-row">
 			<div class="text-center mb-20">
-				<h2 class="font-outfit text-4xl font-bold text-white mb-4">Ready in 3 Seconds</h2>
-				<p class="text-slate-500">No complex setup. It just uses what you already have.</p>
+				<h2 class="font-outfit text-4xl font-bold text-white mb-4">Listo en 3 Segundos</h2>
+				<p class="text-slate-500">Sin configuraciones complejas. Utiliza lo que ya tienes instalado.</p>
 			</div>
 			
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
 				<div class="flex flex-col items-center text-center group">
 					<div class="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center font-bold text-2xl text-mauve mb-6 group-hover:scale-110 transition-transform">1</div>
-					<h4 class="text-xl font-bold text-white mb-3 tracking-wide">Auth with SF CLI</h4>
-					<p class="text-slate-500 text-sm">Use your existing authenticated orgs. If `sf org list` works, SOQLite works.</p>
+					<h4 class="text-xl font-bold text-white mb-3 tracking-wide">Inicia con SF CLI</h4>
+					<p class="text-slate-500 text-sm">Usa tus organizaciones autenticadas. Si `sf org list` funciona, SOQLite también.</p>
 				</div>
 				<div class="flex flex-col items-center text-center group">
 					<div class="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center font-bold text-2xl text-peach mb-6 group-hover:scale-110 transition-transform">2</div>
-					<h4 class="text-xl font-bold text-white mb-3 tracking-wide">Launch SOQLite</h4>
-					<p class="text-slate-500 text-sm">Download the native app for Mac, Windows or Linux. Ultra-light, ultra-fast.</p>
+					<h4 class="text-xl font-bold text-white mb-3 tracking-wide">Ejecuta SOQLite</h4>
+					<p class="text-slate-500 text-sm">Descarga la app nativa para Mac, Windows o Linux. Ultraligera y ultrarápida.</p>
 				</div>
 				<div class="flex flex-col items-center text-center group">
 					<div class="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center font-bold text-2xl text-lavender mb-6 group-hover:scale-110 transition-transform">3</div>
-					<h4 class="text-xl font-bold text-white mb-3 tracking-wide">Query Salesforce</h4>
-					<p class="text-slate-500 text-sm">Start querying at the speed of thought with full schema intelligence.</p>
+					<h4 class="text-xl font-bold text-white mb-3 tracking-wide">Consulta Salesforce</h4>
+					<p class="text-slate-500 text-sm">Empieza a realizar consultas a la velocidad del pensamiento con inteligencia de esquema total.</p>
 				</div>
 			</div>
 		</div>
@@ -205,36 +205,36 @@ const description = "Ultra-fast, native Salesforce client powered by Rust. Zero 
 	<!-- FAQ -->
 	<section id="faq" class="py-32 px-6">
 		<div class="max-row max-w-3xl">
-			<h2 class="font-outfit text-4xl font-bold text-white mb-16 text-center">Frequently Asked Questions</h2>
+			<h2 class="font-outfit text-4xl font-bold text-white mb-16 text-center">Preguntas Frecuentes</h2>
 			<div class="space-y-6">
 				<div class="glass p-6 rounded-2xl">
-					<h5 class="text-white font-bold mb-2">Is SOQLite really free?</h5>
-					<p class="text-slate-400 text-sm">Yes, individual use is 100% free. The project is born from a desire to provide a modern, private tool for the community.</p>
+					<h5 class="text-white font-bold mb-2">¿Es SOQLite realmente gratis?</h5>
+					<p class="text-slate-400 text-sm">Sí, el uso individual es 100% gratuito. Este proyecto nace del deseo de ofrecer una herramienta moderna y privada a la comunidad.</p>
 				</div>
 				<div class="glass p-6 rounded-2xl">
-					<h5 class="text-white font-bold mb-2">Does it send my credentials to any server?</h5>
-					<p class="text-slate-400 text-sm">Never. SOQLite is a native client that communicates directly from your machine to Salesforce APIs via your local SF CLI tokens. No proxies, no middle-men.</p>
+					<h5 class="text-white font-bold mb-2">¿Envía mis credenciales a algún servidor?</h5>
+					<p class="text-slate-400 text-sm">Jamás. SOQLite es un cliente nativo que se comunica directamente desde tu máquina a las APIs de Salesforce, utilizando tus tokens locales. Sin proxies ni intermediarios.</p>
 				</div>
 				<div class="glass p-6 rounded-2xl">
-					<h5 class="text-white font-bold mb-2">What operating systems are supported?</h5>
-					<p class="text-slate-400 text-sm">As a Tauri app, SOQLite is truly cross-platform. We support macOS (Intel/Silicon), Windows, and Linux.</p>
+					<h5 class="text-white font-bold mb-2">¿Qué sistemas operativos soporta?</h5>
+					<p class="text-slate-400 text-sm">Al estar basado en Tauri, SOQLite es multiplataforma. Ofrecemos soporte para macOS (Intel y Silicon), Windows y Linux.</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- Final CTA -->
+	<!-- CTA Final -->
 	<section id="download" class="py-32 px-6">
 		<div class="max-row text-center bg-gradient-to-br from-mauve/20 to-peach/20 p-16 md:p-32 rounded-[3rem] border border-white/10 relative overflow-hidden">
 			<div class="absolute inset-0 z-0 bg-[#0b0b0e]/40 backdrop-blur-3xl"></div>
 			<div class="relative z-10 flex flex-col items-center">
-				<h2 class="font-outfit text-4xl md:text-6xl font-bold text-white mb-8">Ready to supercharge your <span class="text-peach">Salesforce</span> experience?</h2>
+				<h2 class="font-outfit text-4xl md:text-6xl font-bold text-white mb-8">¿Listo para potenciar tu experiencia con <span class="text-peach">Salesforce</span>?</h2>
 				<p class="text-slate-400 text-lg md:text-xl max-w-xl mb-12">
-					Download SOQLite today and join hundreds of consultants who chose privacy and performance.
+					Descarga SOQLite hoy y únete a los cientos de consultores que eligieron privacidad y alto rendimiento.
 				</p>
 				<div class="flex flex-col sm:flex-row items-center gap-6">
-					<Button className="px-12 py-5 text-xl">Download Free now</Button>
-					<span class="text-slate-600 text-sm font-medium">Available for macOS, Windows & Linux</span>
+					<Button className="px-12 py-5 text-xl">Descargar Gratis ya</Button>
+					<span class="text-slate-600 text-sm font-medium">Disponible para macOS, Windows y Linux</span>
 				</div>
 			</div>
 		</div>

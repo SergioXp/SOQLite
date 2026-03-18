@@ -1,0 +1,104 @@
+---
+import { SEO } from "astro-seo";
+import "../styles/global.css";
+
+interface Props {
+	title: string;
+	description: string;
+	lang: "en" | "es";
+}
+
+const { title, description, lang } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<SEO
+			title={title}
+			description={description}
+			canonical={canonicalURL.toString()}
+			openGraph={{
+				basic: {
+					title: title,
+					type: "website",
+					image: "/images/hero.png",
+				},
+				optional: {
+					description: description,
+					locale: lang === "es" ? "es_ES" : "en_US",
+					siteName: "SOQLite",
+				},
+			}}
+			twitter={{
+				card: "summary_large_image",
+				site: "@soqlite",
+				creator: "@soqlite",
+				title: title,
+				description: description,
+				image: "/images/hero.png",
+			}}
+			extend={{
+				// Add hrelang tags
+				link: [
+					{ rel: "alternate", hreflang: "en", href: new URL("/", Astro.site).toString() },
+					{ rel: "alternate", hreflang: "es", href: new URL("/es", Astro.site).toString() },
+					{ rel: "alternate", hreflang: "x-default", href: new URL("/", Astro.site).toString() },
+				],
+			}}
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body class="bg-[#0b0b0e] text-slate-200 antialiased selection:bg-peach/30 selection:text-peach font-inter">
+		<slot />
+		<footer class="py-12 border-t border-white/5 bg-black/20 backdrop-blur-xl">
+			<div class="max-row px-6 text-center">
+				<p class="text-slate-500 text-sm">
+					&copy; {new Date().getFullYear()} SOQLite. Created with &hearts; by <a href="mailto:sergio.gonzalez.hidalgo@devoteam.com" class="text-slate-300 hover:text-white transition-colors">Sergio González</a>
+				</p>
+			</div>
+		</footer>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--mauve: #cba6f7;
+		--peach: #fab387;
+		--lavender: #b4befe;
+		--surface0: #313244;
+	}
+	
+	.font-outfit { font-family: 'Outfit', sans-serif; }
+	.font-mono { font-family: 'JetBrains Mono', monospace; }
+	
+	.max-row {
+		max-width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.glass {
+		background: rgba(255, 255, 255, 0.03);
+		backdrop-filter: blur(12px);
+		border: 1px solid rgba(255, 255, 255, 0.08);
+	}
+
+	.text-gradient {
+		background: linear-gradient(135deg, var(--mauve), var(--peach));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+</style>
