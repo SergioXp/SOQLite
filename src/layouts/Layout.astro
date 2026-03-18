@@ -1,5 +1,6 @@
 ---
 import { SEO } from "astro-seo";
+import Analytics from '@vercel/analytics/astro'
 import "../styles/global.css";
 
 interface Props {
@@ -59,6 +60,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 	</head>
 	<body class="bg-[#0b0b0e] text-slate-200 antialiased selection:bg-peach/30 selection:text-peach font-inter">
 		<slot />
+		<Analytics />
 		<footer class="py-12 border-t border-white/5 bg-black/20 backdrop-blur-xl">
 			<div class="max-row px-6 text-center">
 				<p class="text-slate-500 text-sm">
