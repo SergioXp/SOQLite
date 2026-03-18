@@ -66,6 +66,37 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 				</p>
 			</div>
 		</footer>
+
+		<script is:inline>
+			async function updateVersion() {
+				const repo = "SergioXp/SOQLite";
+				try {
+					const response = await fetch(`https://api.github.com/repos/${repo}/releases/latest`);
+					const data = await response.json();
+					const version = data.tag_name;
+					if (version) {
+						// Update Pill
+						document.querySelectorAll('.version-pill').forEach(el => {
+							const text = document.documentElement.lang === 'es' ? ' ya disponible' : ' is here';
+							const tech = ' with Rust & React 19';
+							el.innerHTML = `<span class="w-2 h-2 rounded-full bg-mauve animate-pulse"></span> ${version}${tech}${text}`;
+						});
+						// Update Buttons
+						document.querySelectorAll('.download-btn').forEach(el => {
+							const isEn = !el.textContent.includes('Descargar');
+							if (el.classList.contains('text-xl')) {
+								el.textContent = isEn ? `Download ${version} now` : `Descargar ${version} ya`;
+							} else {
+								el.textContent = isEn ? `Download for Free (${version})` : `Descargar Gratis (${version})`;
+							}
+						});
+					}
+				} catch (e) {
+					// Silicon Valley fail silently style
+				}
+			}
+			updateVersion();
+		</script>
 	</body>
 </html>
 
